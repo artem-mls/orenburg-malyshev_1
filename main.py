@@ -26,6 +26,10 @@ class YellowCircles(QWidget, UI.Ui_Form):
             x, y = randint(0, self.size().width()), randint(0, self.size().height())
             w = h = randint(5, 200)
             qp.drawEllipse(x, y, w, h)
+            qp.setBrush(QColor(
+                randint(0, 255),
+                randint(0, 255),
+                randint(0, 255)))
 
     def button_click(self):
         self.paint = True
